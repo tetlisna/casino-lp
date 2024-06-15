@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #a09191;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+  }
+
+  &__title {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ddd;
+    }
+  }
+
+  &__author {
+    font-weight: 700;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ddd;
+    }
+
+    @media (min-width: 48rem) {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
