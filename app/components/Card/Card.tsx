@@ -1,6 +1,7 @@
 import { ICard } from '@/types/ICard';
 import styles from './Card.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type Props = {
   card: ICard;
@@ -15,11 +16,11 @@ const Card: React.FC<Props> = ({ card }) => (
 
     <div className={styles.card__imagebox}>
       <Link href={card.gameUrl} target="_blank" rel="noopener noreferrer">
-        <img
+        <Image
           className={styles.card__image}
           src={card.imgUrl}
-          width={100}
-          height={100}
+          width={300}
+          height={300}
           alt={card.title}
         />
       </Link>
