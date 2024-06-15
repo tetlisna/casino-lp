@@ -1,12 +1,17 @@
 import Link from 'next/link';
-import Logo from '../Logo';
 import styles from './NavBar.module.scss';
+import Image from 'next/image';
 
 const NavBar = () => {
   return (
     <nav className={styles.nav}>
       <Link href="/" className={styles.nav__logo}>
-        <Logo />
+        <Image
+          src="./logo.svg"
+          width={50}
+          height={50}
+          alt="Picture of the author"
+        />
         <h1 className={styles.nav__title}>CasinoRoyal</h1>
       </Link>
 
