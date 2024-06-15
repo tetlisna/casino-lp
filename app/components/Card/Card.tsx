@@ -2,8 +2,6 @@ import { ICard } from '@/types/ICard';
 import styles from './Card.module.scss';
 import Link from 'next/link';
 
-import Image from 'next/image';
-
 type Props = {
   card: ICard;
 };

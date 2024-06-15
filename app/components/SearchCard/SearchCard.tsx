@@ -9,7 +9,6 @@ import styles from './SearchCard.module.scss';
 
 const SearchCard: React.FC = () => {
   const [title, setTitle] = useState('');
-  const [preview, setPreview] = useState(gameJSON);
   const [visibleCards, setVisibleCards] = useState([...gameJSON]);
   const debounceTitle = useDebounce(title);
 
@@ -43,7 +42,7 @@ const SearchCard: React.FC = () => {
           />
         </label>
       </form>
-      {preview && (
+      {visibleCards.length > 0 && (
         <div className={styles.cardResults}>
           <CardList cards={visibleCards} />
         </div>
