@@ -4,13 +4,13 @@ import Search from './components/Search/Search';
 import { Suspense } from 'react';
 import CardList from './components/CardList/CardList';
 
-export default async function Home({
+const Home:React.FC = async ({
   searchParams,
 }: {
   searchParams?: {
     s?: string;
   };
-}) {
+}) => {
   const s = searchParams?.s || '';
 
   return (
@@ -29,4 +29,6 @@ export default async function Home({
       </div>
     </main>
   );
-}
+};
+
+export default Home;
