@@ -29,7 +29,7 @@ const Search = () => {
     }
 
     replace(`${pathname}?${params.toString()}`);
-  }, [debounceTitle, pathname]);
+  }, [debounceTitle, pathname, searchParams]);
 
   return (
     <>
