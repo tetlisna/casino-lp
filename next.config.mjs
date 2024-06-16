@@ -6,44 +6,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'assets.nintendo.com',
+        hostname: 'cdn.dummyjson.com',
       },
       {
         protocol: 'https',
-        hostname: 'upload.wikimedia.org',
+        hostname: '"www.freetogame.com"',
       },
-      {
-        protocol: 'https',
-        hostname: 'cdn2.unrealengine.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.zelda.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.cyberpunk.net',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.playstation.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.epicgames.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.minecraft.net',
-      },
-      {
-        protocol: 'https',
-        hostname: 'playoverwatch.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.darksouls3.com',
-      }
     ],
   },
   sassOptions: {

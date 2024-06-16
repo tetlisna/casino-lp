@@ -1,14 +1,20 @@
-'use client';
-
 import styles from './page.module.scss';
 
-import SearchCard from './components/SearchCard/SearchCard';
-import NavBar from './components/NavBar/NavBar';
+import Search from './components/Search/Search';
+import { Suspense } from 'react';
+import CardList from './components/CardList/CardList';
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams?: {
+    s?: string;
+  };
+}) {
+  const s = searchParams?.s || '';
+
   return (
     <main className={styles.home}>
-      <NavBar />
       <div className={styles.home__page}>
         <section className={styles.home__hero}>
           <h2 className={styles.home__title}>
@@ -16,7 +22,10 @@ export default function Home() {
           </h2>
         </section>
         <div className={styles.home__image}></div>
-        <SearchCard />
+        <Search />
+        <Suspense fallback={<p>Loading...</p>}>
+          <CardList search={s} />
+        </Suspense>
       </div>
     </main>
   );
