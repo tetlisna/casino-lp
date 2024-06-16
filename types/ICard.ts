@@ -1,7 +1,6 @@
 export interface ICard {
   title: string;
-  description: string;
-  imgUrl: string;
-  gameUrl: string;
-  gameId: string;
+  short_description: string;
+  id: string;
+  thumbnail: string;
 }

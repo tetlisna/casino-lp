@@ -1,6 +1,7 @@
 .home {
   &__page {
     width: 100%;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -15,8 +16,9 @@
   &__hero {
     width: 100%;
     text-align: center;
+
     padding: 5rem 0;
-    background: url('../public/pexels.jpeg') no-repeat center center;
+    background: url('../public/pexels.jpeg') no-repeat center;
     background-size: cover;
   }
 

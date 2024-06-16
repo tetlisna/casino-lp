@@ -1,25 +1,22 @@
 import styles from './CardList.module.scss';
-import Card from '../Card/Card';
+
 import { ICard } from '@/types/ICard';
+
+import Card from '../components/Card/Card';
 
 const API_URL_GAMES = 'https://www.freetogame.com/api/games';
 
 type Props = {
-  search: string;
+  cards: ICard[];
 };
 
 const getCards = async () => {
   const res = await fetch(API_URL_GAMES);
   return res.json();
 };
-const CardList: React.FC<Props> = async ({ search }: { search: string }) => {
-  let cards: ICard[] = await getCards();
 
-  if (search) {
-    cards = cards.filter((item) =>
-      item.title.toLowerCase().includes(search.trim().toLowerCase()),
-    );
-  }
+const CardList: React.FC<Props> = async () => {
+  const cards = await getCards();
 
   return (
     <div className={styles.cardList}>

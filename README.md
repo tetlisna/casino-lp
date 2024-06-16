@@ -16,6 +16,7 @@ Welcome to the Casino Landing Page project! This project is designed to provide 
 - **Sass**: For efficient and modular CSS.
 - **HTML5**: For the page structure.
 - **TypeScript**: For typing JS.
+- **Api**: [`Free to game API`]( https://www.freetogame.com/api/games);
 
 ## 🚀 Getting Started
 

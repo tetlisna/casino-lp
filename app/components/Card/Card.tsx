@@ -1,5 +1,7 @@
-import { ICard } from '@/types/ICard';
 import styles from './Card.module.scss';
+
+import { ICard } from '@/types/ICard';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -9,16 +11,14 @@ type Props = {
 
 const Card: React.FC<Props> = ({ card }) => (
   <div className={styles.card}>
-    <div className={styles.card__content}>
-      <h3 className={styles.card__title}>{card.title}</h3>
-      <p className={styles.card__description}>{card.description}</p>
-    </div>
+    <h3 className={styles.card__title}>{card.title}</h3>
+    <p className={styles.card__description}>{card.short_description}</p>
 
-    <div className={styles.card__imagebox}>
-      <Link href={card.gameUrl} target="_blank" rel="noopener noreferrer">
+    <div className={styles.__imageContainer}>
+      <Link href={card.thumbnail} target="_blank" rel="noopener noreferrer">
         <Image
           className={styles.card__image}
-          src={card.imgUrl}
+          src={card.thumbnail}
           width={300}
           height={300}
           alt={card.title}
