@@ -22,7 +22,7 @@ Welcome to the Casino Landing Page project! This project is designed to provide 
 
 ### Demo
 
-Check out the live demo here: [DEMO LINK](https://tetlisna.github.io/casino-lp/)
+Check out the live demo deployed on Vercel here: [DEMO LINK](https://casino-lp-2024.vercel.app/)
 
 ## 🚀 Quick Start
 
