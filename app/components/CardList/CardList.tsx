@@ -8,10 +8,11 @@ type Props = {
   search: string;
 };
 
-const getCards = async () => {
-  const res = await fetch(API_URL_GAMES);
-  return res.json();
+const getCards = async (): Promise<ICard[]> => {
+  const res = await fetch(`${API_URL_GAMES}`);
+  return await res.json();
 };
+
 const CardList: React.FC<Props> = async ({ search }: { search: string }) => {
   let cards: ICard[] = await getCards();
 

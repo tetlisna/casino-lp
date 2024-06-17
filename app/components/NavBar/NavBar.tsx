@@ -34,20 +34,12 @@ const NavBar = () => {
           height={50}
           alt="Picture of the author"
         />
-        <h1 className={styles.nav__title}>CasinoRoyal</h1>
+        <h1 className={styles.nav__title}>Casino</h1>
       </Link>
       <div className={styles.nav__links}>
         {socialLinks.map((link, index) => (
           <LinkSocial key={index} {...link} />
         ))}
-        <Link
-          href=""
-          className={styles.nav__title}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          About me
-        </Link>
       </div>
     </nav>
   );
